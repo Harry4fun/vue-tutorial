@@ -14,7 +14,7 @@
     </nav>
     <div class="container">
       <div class="col-sm-3">
-        
+        <sidebar></sidebar>
       </div>
       <div class="col-sm-9">
         <router-view></router-view>
@@ -24,9 +24,10 @@
 </template>
 
 <script>
-// export default {
-//   name: 'app'
-// }
+import Sidebar from './components/Sidebar.vue'
+export default {
+   components : { 'sidebar' : Sidebar }
+}
 </script>
 
 <style>
