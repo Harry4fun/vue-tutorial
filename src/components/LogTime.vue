@@ -13,7 +13,7 @@
           <div class="col-sm-6">
               <label>耗时</label>
               <input 
-                type="time"
+                type="number"
                 class="form-control"
                 v-model="totalTime"
                 placeholder="Hours"
@@ -58,7 +58,7 @@ export default {
             };
             //savePlan和addTotalTime都是在$store中定义。
             this.$store.dispatch('savePlan',plan);
-            this.$store.dispatch('addTotalTime',this.totalTime);
+            this.$store.dispatch('addTotalTime',parseInt(this.totalTime));
             this.$router.go(-1);
 
 
